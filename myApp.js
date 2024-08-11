@@ -3,8 +3,11 @@ const helmet = require('helmet');
 
 const app = express();
 
+// Configura helmet
 app.use(helmet());
 
+// Elimina el encabezado X-Powered-byte
+app.use(helmet.hidePoweredBy());
 
 
 
